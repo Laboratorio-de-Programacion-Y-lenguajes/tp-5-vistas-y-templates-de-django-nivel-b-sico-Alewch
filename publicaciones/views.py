@@ -1,3 +1,5 @@
+from typing import Any
+
 from django.views.generic import TemplateView, ListView, DetailView
 from .models import Publicacion
 
@@ -21,6 +23,14 @@ from .models import Publicacion
 #           context["titulo"] = "..."
 #           context["mensaje"] = "..."
 #           return context
+class InicioView(TemplateView):
+    template_name= "publicaciones/inicio.html"
+
+    def get_context_data(self, **kwargs: Any):
+        context=super().get_context_data(**kwargs)
+        context["titulo"]= "BIENVENIDO AL PORTAL DE PUBLICACIONES"
+        context["mensaje"]= "Aca veras las ultimas publicaciones de nuestros autores"
+        return context
 
 
 # ---------------------------------------------------------------------------

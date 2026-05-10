@@ -24,4 +24,6 @@ urlpatterns = [
     #
     # Pista para registrar una CBV:
     #   path("ruta/", views.MiVista.as_view(), name="nombre"),
+        path("",views.InicioView.as_view(), name="inicio"),
+
 ]
