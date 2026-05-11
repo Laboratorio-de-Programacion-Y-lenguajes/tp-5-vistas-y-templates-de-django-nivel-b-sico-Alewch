@@ -24,7 +24,7 @@ from .models import Publicacion
 #           context["mensaje"] = "..."
 #           return context
 class InicioView(TemplateView):
-    template_name= "publicaciones/inicio.html"
+    template_name="publicaciones/inicio.html"
 
     def get_context_data(self, **kwargs: Any):
         context=super().get_context_data(**kwargs)
